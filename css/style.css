@@ -1,0 +1,246 @@
+:root {
+    --c-primaire: #1d4e89;
+    --c-secondaire: #f4a259;
+    --c-texte: #22252a;
+    --c-texte-doux: #5a6472;
+    --c-fond: #ffffff;
+    --c-fond-alt: #f5f7fa;
+    --c-succes: #2e7d4f;
+    --c-danger: #b3261e;
+
+    --police-titre: "Georgia", serif;
+    --police-corps: system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    --esp-xs: 0.25rem;
+    --esp-s: 0.5rem;
+    --esp-m: 1rem;
+    --esp-l: 2rem;
+    --esp-xl: 4rem;
+
+    --rayon: 8px;
+    --ombre: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --largeur-max: 1140px;
+}
+
+*,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--police-corps);
+    color: var(--c-texte);
+    background: var(--c-fond);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--esp-m);
+    padding: var(--esp-m) var(--esp-l);
+    background: var(--c-primaire);
+    color: white;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-family: var(--police-titre);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.site-header nav ul {
+    display: flex;
+    gap: var(--esp-m);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-header nav a:hover {
+    color: var(--c-secondaire);
+}
+
+.grille-livres {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--esp-l);
+    max-width: var(--largeur-max);
+    margin-inline: auto;
+    padding: var(--esp-l);
+}
+
+.livre-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--c-fond-alt);
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.livre-card:hover,
+.livre-card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+}
+
+.livre-card figure {
+    margin: 0;
+}
+
+.livre-card figure img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.livre-card h3,
+.livre-card p {
+    margin-inline: var(--esp-m);
+}
+
+.livre-card h3 {
+    font-family: var(--police-titre);
+}
+
+.dispo--oui {
+    color: var(--c-succes);
+}
+
+.dispo--non {
+    color: var(--c-danger);
+}
+
+@media (max-width: 639px) {
+    .site-header {
+        flex-direction: column;
+    }
+
+    .site-header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 640px) {
+    .site-header nav ul {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    .site-header {
+        padding-inline: var(--esp-xl);
+    }
+}
+
+@media (min-width: 1440px) {
+    .grille-livres {
+        max-width: var(--largeur-max);
+    }
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--c-secondaire);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+.form-contact {
+    max-width: 700px;
+    margin: var(--esp-xl) auto;
+    padding: var(--esp-l);
+}
+
+.form-contact fieldset {
+    border: 1px solid var(--c-texte-doux);
+    border-radius: var(--rayon);
+    padding: var(--esp-l);
+}
+
+.form-groupe {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-s);
+    margin-bottom: var(--esp-m);
+}
+
+.form-groupe input,
+.form-groupe select,
+.form-groupe textarea {
+    padding: var(--esp-s);
+    border: 1px solid var(--c-texte-doux);
+    border-radius: var(--rayon);
+    font: inherit;
+}
+
+.form-groupe textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    padding: var(--esp-s) var(--esp-m);
+    border: 0;
+    border-radius: var(--rayon);
+    background: var(--c-primaire);
+    color: var(--c-fond);
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--c-secondaire);
+}
+
+main {
+    max-width: var(--largeur-max);
+    margin-inline: auto;
+    padding: var(--esp-l);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--police-titre);
+}
+
+.hero {
+    padding: var(--esp-xl) 0;
+    text-align: center;
+}
+
+.site-footer {
+    padding: var(--esp-l);
+    background: var(--c-primaire);
+    color: var(--c-fond);
+    text-align: center;
+}
