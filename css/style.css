@@ -245,3 +245,13 @@ h3 {
     color: var(--c-fond);
     text-align: center;
 }
+
+@media (prefers-color-scheme: dark) {
+:root {
+--c-fond: #16181d;
+--c-fond-alt: #1f232b;
+--c-texte: #e8eaed;
+--c-texte-doux:#a5aebc;
+--c-primaire: #6ea8dc;
+}
+}
