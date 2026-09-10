@@ -10,3 +10,16 @@ Thumbs.db
 *.log
 *.tmp
 *~
+### Question D.2
+
+Contenu du fichier `index.html` en conflit avant résolution :
+
+```text
+<<<<<<< HEAD
+<h1>Bienvenue sur CampusLib</h1>
+=======
+<h1>CampusLib — votre bibliothèque universitaire</h1>
+>>>>>>> experiment/titre
+```
+
+`HEAD` représente la version de la branche actuellement active au moment du conflit. Dans notre cas, nous étions sur la branche `main`, donc `HEAD` représente la version de `main`.
