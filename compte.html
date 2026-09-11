@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mon compte - CampusLib</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- En-tête -->
+    <header class="site-header">
+
+        <a href="index.html" class="logo">
+            CampusLib
+        </a>
+
+        <nav class="site-nav" aria-label="Navigation principale">
+
+            <button class="menu-toggle" type="button" aria-label="Ouvrir le menu">
+                ☰
+            </button>
+
+            <ul>
+
+                <li>
+                    <a href="index.html" aria-current="page">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="catalogue.html">
+                        Catalogue
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li id="menu-connexion">
+                    <a href="connexion.html">
+                        Connexion
+                    </a>
+                </li>
+
+                <li id="menu-inscription">
+                    <a href="inscription.html">
+                        Inscription
+                    </a>
+                </li>
+
+                <li id="menu-compte" hidden>
+                    <a href="compte.html">
+                        Mon compte
+                    </a>
+                </li>
+
+                <li id="menu-deconnexion" hidden>
+                    <button type="button" class="bouton-menu-deconnexion">
+                        Déconnexion
+                    </button>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Changer de thème">
+            <span class="theme-icon">☾</span>
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <section class="page-introduction">
+
+            <div class="section-entete">
+
+                <span class="hero-sur-titre">
+                    Espace étudiant
+                </span>
+
+                <h1>
+                    Mon compte
+                </h1>
+
+                <p>
+                    Gérez votre profil et consultez vos
+                    livres empruntés.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="compte-section">
+
+            <div class="compte-conteneur">
+
+
+                <!-- INFORMATIONS DU PROFIL -->
+
+                <div class="compte-profil">
+
+                    <div class="profil-avatar">
+                        <span id="profil-initiales">
+                            ?
+                        </span>
+                    </div>
+
+
+                    <div class="profil-informations">
+
+                        <h2 id="profil-nom">
+                            Utilisateur
+                        </h2>
+
+                        <p id="profil-email">
+                            email@example.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STATISTIQUES -->
+
+                <div class="compte-statistiques">
+
+                    <div class="compte-statistique">
+
+                        <strong id="nombre-emprunts">
+                            0
+                        </strong>
+
+                        <span>
+                            Livres empruntés
+                        </span>
+
+                    </div>
+
+
+                    <div class="compte-statistique">
+
+                        <strong>
+                            0
+                        </strong>
+
+                        <span>
+                            Retours
+                        </span>
+
+                    </div>
+
+
+                    <div class="compte-statistique">
+
+                        <strong>
+                            0
+                        </strong>
+
+                        <span>
+                            Réservations
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMPRUNTS -->
+
+                <div class="compte-emprunts">
+
+                    <div class="section-entete-compte">
+
+                        <div>
+
+                            <span class="hero-sur-titre">
+                                Bibliothèque
+                            </span>
+
+                            <h2>
+                                Mes emprunts
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="liste-emprunts" class="liste-emprunts">
+
+                        <div class="aucun-emprunt">
+
+                            <h3>
+                                Aucun livre emprunté
+                            </h3>
+
+                            <p>
+                                Vous n'avez actuellement
+                                aucun livre emprunté.
+                            </p>
+
+                            <a href="catalogue.html" class="bouton bouton-primaire">
+                                Consulter le catalogue
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DÉCONNEXION -->
+
+                <div class="compte-actions">
+
+                    <button type="button" id="bouton-deconnexion-compte" class="bouton bouton-secondaire">
+                        Déconnexion
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="footer-contenu">
+
+            <div>
+
+                <a href="index.html" class="logo">
+                    CampusLib
+                </a>
+
+                <p>
+                    Votre bibliothèque universitaire
+                    numérique.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bas">
+
+            <p>
+                &copy; 2026 CampusLib.
+                Tous droits réservés.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

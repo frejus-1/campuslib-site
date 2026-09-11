@@ -4,82 +4,484 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bibliothèque du campus CampusLib">
-    <title>CampusLib — Accueil</title>
+
+    <meta name="description"
+        content="CampusLib, la bibliothèque universitaire en ligne pour consulter les livres disponibles sur le campus.">
+
+    <title>CampusLib — Bibliothèque universitaire</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+    <!-- En-tête -->
     <header class="site-header">
 
-        <a href="index.html" class="logo">CampusLib</a>
+        <a href="index.html" class="logo">
+            CampusLib
+        </a>
 
-        <nav aria-label="Navigation principale">
+        <nav class="site-nav" aria-label="Navigation principale">
+
+            <button class="menu-toggle" type="button" aria-label="Ouvrir le menu">
+                ☰
+            </button>
+
             <ul>
+
                 <li>
-                    <a href="index.html" aria-current="page">Accueil</a>
+                    <a href="index.html" aria-current="page">
+                        Accueil
+                    </a>
                 </li>
+
                 <li>
-                    <a href="catalogue.html">Catalogue</a>
+                    <a href="catalogue.html">
+                        Catalogue
+                    </a>
                 </li>
+
                 <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="contact.html">
+                        Contact
+                    </a>
                 </li>
+
+                <li id="menu-connexion">
+                    <a href="connexion.html">
+                        Connexion
+                    </a>
+                </li>
+
+                <li id="menu-inscription">
+                    <a href="inscription.html">
+                        Inscription
+                    </a>
+                </li>
+
+                <li id="menu-compte" hidden>
+                    <a href="compte.html">
+                        Mon compte
+                    </a>
+                </li>
+
+                <li id="menu-deconnexion" hidden>
+                    <button type="button" class="bouton-menu-deconnexion">
+                        Déconnexion
+                    </button>
+                </li>
+
             </ul>
+
         </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Changer de thème">
+            <span class="theme-icon">☾</span>
+        </button>
 
     </header>
 
+
     <main>
 
+        <!-- Section principale -->
         <section class="hero">
-            <h1>Bienvenue à CampusLib</h1>
 
-            <p>
-                La bibliothèque universitaire au service des étudiants.
-            </p>
+            <div class="hero-contenu">
 
-            <a href="catalogue.html">Consulter le catalogue</a>
-        </section>
+                <span class="hero-sur-titre">
+                    Bibliothèque universitaire
+                </span>
 
-        <section>
-            <h2>À propos de CampusLib</h2>
+                <h1>
+                    Bienvenue à <strong>CampusLib</strong>
+                </h1>
 
-            <p>
-                CampusLib permet aux étudiants de consulter les ouvrages
-                disponibles dans la bibliothèque du campus.
-            </p>
-        </section>
-
-        <section>
-            <h2>Livres à la une</h2>
-
-            <article class="livre-card">
-                <figure>
-                    <img src="img/algorithmes.png" alt="Livre Introduction aux algorithmes">
-                    <figcaption>Introduction aux algorithmes</figcaption>
-                </figure>
-
-                <h3>Introduction aux algorithmes</h3>
-
-                <p>Cormen et al.</p>
-
-                <p>
-                    Publié en <time datetime="2009">2009</time>
+                <p class="hero-description">
+                    Retrouvez facilement vos livres universitaires,
+                    consultez leur disponibilité et gérez vos emprunts
+                    depuis un seul espace.
                 </p>
 
-                <p>Catégorie : Informatique</p>
+                <div class="hero-actions">
 
-                <p>Disponible</p>
-            </article>
+                    <a href="catalogue.html" class="bouton bouton-primaire">
+                        Découvrir le catalogue
+                    </a>
+
+                    <a href="inscription.html" class="bouton bouton-secondaire">
+                        Créer un compte
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Statistiques -->
+        <section class="section-statistiques" aria-label="Statistiques de la bibliothèque">
+
+            <div class="statistique">
+                <strong>500+</strong>
+                <span>Livres disponibles</span>
+            </div>
+
+            <div class="statistique">
+                <strong>12</strong>
+                <span>Catégories</span>
+            </div>
+
+            <div class="statistique">
+                <strong>250+</strong>
+                <span>Étudiants</span>
+            </div>
+
+            <div class="statistique">
+                <strong>24/7</strong>
+                <span>Catalogue accessible</span>
+            </div>
+
+        </section>
+
+
+        <!-- Présentation -->
+        <section class="section-apropos">
+
+            <div class="section-entete">
+
+                <span class="hero-sur-titre">
+                    À propos
+                </span>
+
+                <h2>
+                    Une bibliothèque pensée pour les étudiants
+                </h2>
+
+                <p>
+                    CampusLib facilite l'accès aux ressources
+                    documentaires du campus et permet aux étudiants
+                    de trouver rapidement les ouvrages dont ils ont besoin.
+                </p>
+
+            </div>
+
+            <div class="apropos-contenu">
+
+                <div>
+                    <h3>Recherchez facilement</h3>
+
+                    <p>
+                        Trouvez rapidement un livre grâce au catalogue
+                        et aux différents outils de recherche.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Vérifiez la disponibilité</h3>
+
+                    <p>
+                        Consultez immédiatement les ouvrages disponibles
+                        et ceux qui sont actuellement empruntés.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Gérez vos emprunts</h3>
+
+                    <p>
+                        Retrouvez vos livres empruntés et votre historique
+                        depuis votre espace étudiant.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Livres à la une -->
+        <section class="section-livres">
+
+            <div class="section-entete section-entete-livres">
+
+                <div>
+                    <span class="hero-sur-titre">
+                        Sélection
+                    </span>
+
+                    <h2>
+                        Livres à la une
+                    </h2>
+
+                    <p>
+                        Découvrez quelques ouvrages disponibles
+                        dans notre bibliothèque.
+                    </p>
+                </div>
+
+                <a href="catalogue.html" class="lien-voir-plus">
+                    Voir le catalogue
+                </a>
+
+            </div>
+
+
+            <div class="grille-livres">
+
+                <!-- Livre 1 -->
+                <article class="livre-card livre-card-vedette">
+
+                    <figure>
+
+                        <img src="img/algorithmes.png" alt="Couverture du livre Introduction aux algorithmes">
+
+                        <figcaption>
+                            Introduction aux algorithmes
+                        </figcaption>
+
+                    </figure>
+
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite disponible">
+                            Disponible
+                        </span>
+
+                        <h3>
+                            Introduction aux algorithmes
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Cormen et al.
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Informatique
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="2009">2009</time>
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <a href="catalogue.html" class="bouton bouton-secondaire">
+                                Voir les détails
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Livre 2 -->
+                <article class="livre-card">
+
+                    <figure>
+
+                        <img src="img/livre2.png" alt="Couverture du livre Le Petit Prince">
+
+                        <figcaption>
+                            Le Petit Prince
+                        </figcaption>
+
+                    </figure>
+
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite disponible">
+                            Disponible
+                        </span>
+
+                        <h3>
+                            Le Petit Prince
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Antoine de Saint-Exupéry
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Littérature
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="1943">1943</time>
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <a href="catalogue.html" class="bouton bouton-secondaire">
+                                Voir les détails
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Livre 3 -->
+                <article class="livre-card">
+
+                    <figure>
+
+                        <img src="img/livre3.png" alt="Couverture du livre Mathématiques générales">
+
+                        <figcaption>
+                            Mathématiques générales
+                        </figcaption>
+
+                    </figure>
+
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite disponible">
+                            Disponible
+                        </span>
+
+                        <h3>
+                            Mathématiques générales
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Auteur à compléter
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Mathématiques
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="2020">2020</time>
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <a href="catalogue.html" class="bouton bouton-secondaire">
+                                Voir les détails
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Appel à l'action -->
+        <section class="section-cta">
+
+            <div class="section-entete">
+
+                <h2>
+                    Besoin d'un livre ?
+                </h2>
+
+                <p>
+                    Connectez-vous à votre espace étudiant pour
+                    consulter vos emprunts et accéder aux fonctionnalités
+                    de la bibliothèque.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="connexion.html" class="bouton bouton-primaire">
+                        Se connecter
+                    </a>
+
+                    <a href="inscription.html" class="bouton bouton-secondaire">
+                        S'inscrire
+                    </a>
+
+                </div>
+
+            </div>
+
         </section>
 
     </main>
 
+
+    <!-- Pied de page -->
     <footer class="site-footer">
-        <p>&copy; 2026 CampusLib — Université Example</p>
+
+        <div class="footer-contenu">
+
+            <div>
+
+                <a href="index.html" class="logo">
+                    CampusLib
+                </a>
+
+                <p>
+                    La bibliothèque universitaire au service
+                    des étudiants.
+                </p>
+
+            </div>
+
+            <div class="footer-liens">
+
+                <h3>Navigation</h3>
+
+                <a href="index.html">Accueil</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div class="footer-liens">
+
+                <h3>Compte</h3>
+
+                <a href="connexion.html">Connexion</a>
+                <a href="inscription.html">Inscription</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bas">
+
+            <p>
+                &copy; 2026 CampusLib — Université Example
+            </p>
+
+        </div>
+
     </footer>
+
+
+    <script src="js/script.js"></script>
 
 </body>
 

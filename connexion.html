@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Connexion - CampusLib</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- En-tête -->
+    <header class="site-header">
+
+        <a href="index.html" class="logo">
+            CampusLib
+        </a>
+
+        <nav class="site-nav" aria-label="Navigation principale">
+
+            <button class="menu-toggle" type="button" aria-label="Ouvrir le menu">
+                ☰
+            </button>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Accueil</a>
+                </li>
+
+                <li>
+                    <a href="catalogue.html" aria-current="page">
+                        Catalogue
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li id="menu-compte">
+                    <a href="connexion.html">
+                        Connexion
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Changer de thème">
+            <span class="theme-icon">☾</span>
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <section class="page-introduction">
+
+            <div class="section-entete">
+
+                <span class="hero-sur-titre">
+                    Espace étudiant
+                </span>
+
+                <h1>
+                    Connexion
+                </h1>
+
+                <p>
+                    Connectez-vous à votre compte CampusLib
+                    pour gérer vos emprunts.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="auth-section">
+
+            <div class="auth-card">
+
+                <h2>
+                    Se connecter
+                </h2>
+
+                <p class="auth-description">
+                    Entrez vos identifiants pour accéder
+                    à votre espace.
+                </p>
+
+
+                <form id="form-connexion">
+
+                    <div class="form-groupe">
+
+                        <label for="connexion-email">
+                            Adresse e-mail
+                        </label>
+
+                        <input type="email" id="connexion-email" placeholder="exemple@email.com" required>
+
+                    </div>
+
+
+                    <div class="form-groupe">
+
+                        <label for="connexion-mot-de-passe">
+                            Mot de passe
+                        </label>
+
+                        <input type="password" id="connexion-mot-de-passe" placeholder="Votre mot de passe" required>
+
+                    </div>
+
+
+                    <p id="message-connexion" class="message-auth"></p>
+
+
+                    <button type="submit" class="bouton bouton-primaire bouton-auth">
+                        Se connecter
+                    </button>
+
+                </form>
+
+
+                <p class="auth-lien">
+
+                    Vous n'avez pas encore de compte ?
+
+                    <a href="inscription.html">
+                        Créer un compte
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="footer-contenu">
+
+            <div>
+
+                <a href="index.html" class="logo">
+                    CampusLib
+                </a>
+
+                <p>
+                    Votre bibliothèque universitaire
+                    numérique.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bas">
+
+            <p>
+                &copy; 2026 CampusLib.
+                Tous droits réservés.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

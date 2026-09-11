@@ -4,134 +4,1086 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bibliothèque du campus CampusLib">
+
+    <meta name="description"
+        content="Découvrez les livres disponibles dans le catalogue de la bibliothèque universitaire CampusLib.">
+
     <title>CampusLib — Catalogue</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+    <!-- En-tête -->
     <header class="site-header">
 
-        <a href="index.html" class="logo">CampusLib</a>
+        <a href="index.html" class="logo">
+            CampusLib
+        </a>
 
-        <nav aria-label="Navigation principale">
+        <nav class="site-nav" aria-label="Navigation principale">
+
+            <button class="menu-toggle" type="button" aria-label="Ouvrir le menu">
+                ☰
+            </button>
+
             <ul>
+
                 <li>
-                    <a href="index.html" aria-current="page">Accueil</a>
+                    <a href="index.html">Accueil</a>
                 </li>
+
                 <li>
-                    <a href="catalogue.html">Catalogue</a>
+                    <a href="catalogue.html" aria-current="page">
+                        Catalogue
+                    </a>
                 </li>
+
                 <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="contact.html">
+                        Contact
+                    </a>
                 </li>
+
+                <li id="menu-compte">
+                    <a href="connexion.html">
+                        Connexion
+                    </a>
+                </li>
+
             </ul>
+
         </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Changer de thème">
+            <span class="theme-icon">☾</span>
+        </button>
 
     </header>
 
+
     <main>
 
-        <section>
-            <h1>Catalogue des livres</h1>
+        <!-- Introduction -->
+        <section class="page-introduction">
 
-            <p>
-                Découvrez les ouvrages disponibles à la bibliothèque.
-            </p>
+            <div class="section-entete">
+
+                <span class="hero-sur-titre">
+                    Bibliothèque
+                </span>
+
+                <h1>
+                    Catalogue des livres
+                </h1>
+
+                <p>
+                    Recherchez et découvrez les ouvrages disponibles
+                    dans la bibliothèque universitaire.
+                </p>
+
+            </div>
+
         </section>
 
-        <section>
-            <h2>Les livres</h2>
+
+        <!-- Outils du catalogue -->
+        <section class="catalogue-outils">
+
+            <!-- Recherche -->
+            <div class="recherche">
+
+                <label for="recherche-livre">
+                    Rechercher un livre
+                </label>
+
+                <input type="search" id="recherche-livre" placeholder="Titre, auteur..." autocomplete="off">
+
+            </div>
+
+
+            <!-- Catégories -->
+            <div class="filtre">
+
+                <h2>
+                    Catégories
+                </h2>
+
+                <div class="boutons-filtre">
+
+                    <button type="button" class="filtre-actif" data-categorie="toutes">
+                        Toutes
+                    </button>
+
+                    <button type="button" data-categorie="Informatique">
+                        Informatique
+                    </button>
+
+                    <button type="button" data-categorie="Littérature">
+                        Littérature
+                    </button>
+
+                    <button type="button" data-categorie="Mathématiques">
+                        Mathématiques
+                    </button>
+
+                    <button type="button" data-categorie="Sciences">
+                        Sciences
+                    </button>
+
+                    <button type="button" data-categorie="Économie">
+                        Économie
+                    </button>
+
+                    <button type="button" data-categorie="Droit">
+                        Droit
+                    </button>
+
+                    <button type="button" data-categorie="Gestion">
+                        Gestion
+                    </button>
+
+                    <button type="button" data-categorie="Langues">
+                        Langues
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Disponibilité -->
+            <div class="filtre filtre-disponibilite">
+
+                <h2>
+                    Disponibilité
+                </h2>
+
+                <div class="boutons-filtre">
+
+                    <button type="button" class="filtre-actif" data-disponibilite="toutes">
+                        Tous
+                    </button>
+
+                    <button type="button" data-disponibilite="disponible">
+                        Disponibles
+                    </button>
+
+                    <button type="button" data-disponibilite="indisponible">
+                        Indisponibles
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Nombre de résultats -->
+            <p class="nombre-resultats">
+                <strong id="nombre-livres">12</strong>
+                livres trouvés
+            </p>
+
+        </section>
+
+
+        <!-- Catalogue -->
+        <section class="section-livres">
 
             <div class="grille-livres">
 
-                <article class="livre-card">
+
+                <!-- 1. Introduction aux algorithmes -->
+                <article class="livre-card" data-categorie="Informatique" data-disponibilite="disponible"
+                    data-titre="Introduction aux algorithmes" data-auteur="Cormen et al.">
+
                     <figure>
+
                         <img src="img/livre1.png" alt="Couverture du livre Introduction aux algorithmes">
-                        <figcaption>Introduction aux algorithmes</figcaption>
+
+                        <figcaption>
+                            Introduction aux algorithmes
+                        </figcaption>
+
                     </figure>
 
-                    <h3>Introduction aux algorithmes</h3>
-                    <p>Cormen et al.</p>
-                    <p>Catégorie : Informatique</p>
-                    <p>Année : <time datetime="2009">2009</time></p>
-                    <p>Disponible — 4 exemplaires</p>
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite disponible">
+                            Disponible
+                        </span>
+
+                        <h3>
+                            Introduction aux algorithmes
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Cormen et al.
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Informatique
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="2009">2009</time>
+                            </p>
+
+                            <p class="livre-exemplaires">
+                                4 exemplaires disponibles
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <button type="button" class="bouton bouton-secondaire bouton-details">
+                                Voir plus
+                            </button>
+
+                            <button type="button" class="bouton bouton-primaire bouton-emprunter">
+                                Emprunter
+                            </button>
+
+                        </div>
+
+                    </div>
+
                 </article>
 
-                <article class="livre-card">
+
+                <!-- 2. Programmation Web -->
+                <article class="livre-card" data-categorie="Informatique" data-disponibilite="indisponible"
+                    data-titre="Programmation Web" data-auteur="Auteur à compléter">
+
                     <figure>
-                        <img src="img/livre2.png" alt="Couverture du Petit Prince">
-                        <figcaption>Le Petit Prince</figcaption>
+
+                        <img src="img/livre5.png" alt="Couverture du livre Programmation Web">
+
+                        <figcaption>
+                            Programmation Web
+                        </figcaption>
+
                     </figure>
 
-                    <h3>Le Petit Prince</h3>
-                    <p>Antoine de Saint-Exupéry</p>
-                    <p>Catégorie : Littérature</p>
-                    <p>Année : <time datetime="1943">1943</time></p>
-                    <p>Disponible — 2 exemplaires</p>
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite indisponible">
+                            Indisponible
+                        </span>
+
+                        <h3>
+                            Programmation Web
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Auteur à compléter
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Informatique
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="2022">2022</time>
+                            </p>
+
+                            <p class="livre-exemplaires">
+                                Aucun exemplaire disponible
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <button type="button" class="bouton bouton-secondaire bouton-details">
+                                Voir plus
+                            </button>
+
+                            <button type="button" class="bouton bouton-primaire bouton-emprunter" disabled>
+                                Indisponible
+                            </button>
+
+                        </div>
+
+                    </div>
+
                 </article>
 
-                <article class="livre-card">
+
+                <!-- 3. Le Petit Prince -->
+                <article class="livre-card" data-categorie="Littérature" data-disponibilite="disponible"
+                    data-titre="Le Petit Prince" data-auteur="Antoine de Saint-Exupéry">
+
                     <figure>
-                        <img src="img/livre3.png" alt="Couverture d'un livre de mathématiques">
-                        <figcaption>Mathématiques générales</figcaption>
+
+                        <img src="img/livre2.png" alt="Couverture du livre Le Petit Prince">
+
+                        <figcaption>
+                            Le Petit Prince
+                        </figcaption>
+
                     </figure>
 
-                    <h3>Mathématiques générales</h3>
-                    <p>Auteur à compléter</p>
-                    <p>Catégorie : Mathématiques</p>
-                    <p>Année : <time datetime="2020">2020</time></p>
-                    <p>Disponible</p>
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite disponible">
+                            Disponible
+                        </span>
+
+                        <h3>
+                            Le Petit Prince
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Antoine de Saint-Exupéry
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Littérature
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="1943">1943</time>
+                            </p>
+
+                            <p class="livre-exemplaires">
+                                2 exemplaires disponibles
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <button type="button" class="bouton bouton-secondaire bouton-details">
+                                Voir plus
+                            </button>
+
+                            <button type="button" class="bouton bouton-primaire bouton-emprunter">
+                                Emprunter
+                            </button>
+
+                        </div>
+
+                    </div>
+
                 </article>
 
-                <article class="livre-card">
+
+                <!-- 4. Les Misérables -->
+                <article class="livre-card" data-categorie="Littérature" data-disponibilite="disponible"
+                    data-titre="Les Misérables" data-auteur="Victor Hugo">
+
                     <figure>
-                        <img src="img/livre4.png" alt="Couverture d'un livre de physique">
-                        <figcaption>Physique générale</figcaption>
+
+                        <img src="img/livre6.png" alt="Couverture du livre Les Misérables">
+
+                        <figcaption>
+                            Les Misérables
+                        </figcaption>
+
                     </figure>
 
-                    <h3>Physique générale</h3>
-                    <p>Auteur à compléter</p>
-                    <p>Catégorie : Sciences</p>
-                    <p>Année : <time datetime="2021">2021</time></p>
-                    <p>Disponible</p>
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite disponible">
+                            Disponible
+                        </span>
+
+                        <h3>
+                            Les Misérables
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Victor Hugo
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Littérature
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="1862">1862</time>
+                            </p>
+
+                            <p class="livre-exemplaires">
+                                3 exemplaires disponibles
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <button type="button" class="bouton bouton-secondaire bouton-details">
+                                Voir plus
+                            </button>
+
+                            <button type="button" class="bouton bouton-primaire bouton-emprunter">
+                                Emprunter
+                            </button>
+
+                        </div>
+
+                    </div>
+
                 </article>
 
-                <article class="livre-card">
+
+                <!-- 5. Mathématiques générales -->
+                <article class="livre-card" data-categorie="Mathématiques" data-disponibilite="disponible"
+                    data-titre="Mathématiques générales" data-auteur="Auteur à compléter">
+
                     <figure>
-                        <img src="img/livre5.png" alt="Couverture d'un livre de programmation">
-                        <figcaption>Programmation Web</figcaption>
+
+                        <img src="img/livre3.png" alt="Couverture du livre Mathématiques générales">
+
+                        <figcaption>
+                            Mathématiques générales
+                        </figcaption>
+
                     </figure>
 
-                    <h3>Programmation Web</h3>
-                    <p>Auteur à compléter</p>
-                    <p>Catégorie : Informatique</p>
-                    <p>Année : <time datetime="2022">2022</time></p>
-                    <p>Indisponible</p>
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite disponible">
+                            Disponible
+                        </span>
+
+                        <h3>
+                            Mathématiques générales
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Auteur à compléter
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Mathématiques
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="2020">2020</time>
+                            </p>
+
+                            <p class="livre-exemplaires">
+                                5 exemplaires disponibles
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <button type="button" class="bouton bouton-secondaire bouton-details">
+                                Voir plus
+                            </button>
+
+                            <button type="button" class="bouton bouton-primaire bouton-emprunter">
+                                Emprunter
+                            </button>
+
+                        </div>
+
+                    </div>
+
                 </article>
 
-                <article class="livre-card">
+
+                <!-- 6. Analyse mathématique -->
+                <article class="livre-card" data-categorie="Mathématiques" data-disponibilite="indisponible"
+                    data-titre="Analyse mathématique" data-auteur="Auteur à compléter">
+
                     <figure>
-                        <img src="img/livre6.png" alt="Couverture d'un livre de littérature">
-                        <figcaption>Les Misérables</figcaption>
+
+                        <img src="img/livre3.png" alt="Couverture du livre Analyse mathématique">
+
+                        <figcaption>
+                            Analyse mathématique
+                        </figcaption>
+
                     </figure>
 
-                    <h3>Les Misérables</h3>
-                    <p>Victor Hugo</p>
-                    <p>Catégorie : Littérature</p>
-                    <p>Année : <time datetime="1862">1862</time></p>
-                    <p>Disponible</p>
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite indisponible">
+                            Indisponible
+                        </span>
+
+                        <h3>
+                            Analyse mathématique
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Auteur à compléter
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Mathématiques
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="2021">2021</time>
+                            </p>
+
+                            <p class="livre-exemplaires">
+                                Aucun exemplaire disponible
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <button type="button" class="bouton bouton-secondaire bouton-details">
+                                Voir plus
+                            </button>
+
+                            <button type="button" class="bouton bouton-primaire bouton-emprunter" disabled>
+                                Indisponible
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 7. Physique générale -->
+                <article class="livre-card" data-categorie="Sciences" data-disponibilite="disponible"
+                    data-titre="Physique générale" data-auteur="Auteur à compléter">
+
+                    <figure>
+
+                        <img src="img/livre4.png" alt="Couverture du livre Physique générale">
+
+                        <figcaption>
+                            Physique générale
+                        </figcaption>
+
+                    </figure>
+
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite disponible">
+                            Disponible
+                        </span>
+
+                        <h3>
+                            Physique générale
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Auteur à compléter
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Sciences
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="2021">2021</time>
+                            </p>
+
+                            <p class="livre-exemplaires">
+                                3 exemplaires disponibles
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <button type="button" class="bouton bouton-secondaire bouton-details">
+                                Voir plus
+                            </button>
+
+                            <button type="button" class="bouton bouton-primaire bouton-emprunter">
+                                Emprunter
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 8. Chimie générale -->
+                <article class="livre-card" data-categorie="Sciences" data-disponibilite="disponible"
+                    data-titre="Chimie générale" data-auteur="Auteur à compléter">
+
+                    <figure>
+
+                        <img src="img/livre4.png" alt="Couverture du livre Chimie générale">
+
+                        <figcaption>
+                            Chimie générale
+                        </figcaption>
+
+                    </figure>
+
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite disponible">
+                            Disponible
+                        </span>
+
+                        <h3>
+                            Chimie générale
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Auteur à compléter
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Sciences
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="2022">2022</time>
+                            </p>
+
+                            <p class="livre-exemplaires">
+                                2 exemplaires disponibles
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <button type="button" class="bouton bouton-secondaire bouton-details">
+                                Voir plus
+                            </button>
+
+                            <button type="button" class="bouton bouton-primaire bouton-emprunter">
+                                Emprunter
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 9. Principes d'économie -->
+                <article class="livre-card" data-categorie="Économie" data-disponibilite="disponible"
+                    data-titre="Principes d'économie" data-auteur="Auteur à compléter">
+
+                    <figure>
+
+                        <img src="img/livre3.png" alt="Couverture du livre Principes d'économie">
+
+                        <figcaption>
+                            Principes d'économie
+                        </figcaption>
+
+                    </figure>
+
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite disponible">
+                            Disponible
+                        </span>
+
+                        <h3>
+                            Principes d'économie
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Auteur à compléter
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Économie
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="2023">2023</time>
+                            </p>
+
+                            <p class="livre-exemplaires">
+                                4 exemplaires disponibles
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <button type="button" class="bouton bouton-secondaire bouton-details">
+                                Voir plus
+                            </button>
+
+                            <button type="button" class="bouton bouton-primaire bouton-emprunter">
+                                Emprunter
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 10. Introduction au droit -->
+                <article class="livre-card" data-categorie="Droit" data-disponibilite="indisponible"
+                    data-titre="Introduction au droit" data-auteur="Auteur à compléter">
+
+                    <figure>
+
+                        <img src="img/livre2.png" alt="Couverture du livre Introduction au droit">
+
+                        <figcaption>
+                            Introduction au droit
+                        </figcaption>
+
+                    </figure>
+
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite indisponible">
+                            Indisponible
+                        </span>
+
+                        <h3>
+                            Introduction au droit
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Auteur à compléter
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Droit
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="2022">2022</time>
+                            </p>
+
+                            <p class="livre-exemplaires">
+                                Aucun exemplaire disponible
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <button type="button" class="bouton bouton-secondaire bouton-details">
+                                Voir plus
+                            </button>
+
+                            <button type="button" class="bouton bouton-primaire bouton-emprunter" disabled>
+                                Indisponible
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 11. Management des organisations -->
+                <article class="livre-card" data-categorie="Gestion" data-disponibilite="disponible"
+                    data-titre="Management des organisations" data-auteur="Auteur à compléter">
+
+                    <figure>
+
+                        <img src="img/livre5.png" alt="Couverture du livre Management des organisations">
+
+                        <figcaption>
+                            Management des organisations
+                        </figcaption>
+
+                    </figure>
+
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite disponible">
+                            Disponible
+                        </span>
+
+                        <h3>
+                            Management des organisations
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Auteur à compléter
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Gestion
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="2023">2023</time>
+                            </p>
+
+                            <p class="livre-exemplaires">
+                                2 exemplaires disponibles
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <button type="button" class="bouton bouton-secondaire bouton-details">
+                                Voir plus
+                            </button>
+
+                            <button type="button" class="bouton bouton-primaire bouton-emprunter">
+                                Emprunter
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 12. Anglais universitaire -->
+                <article class="livre-card" data-categorie="Langues" data-disponibilite="disponible"
+                    data-titre="Anglais universitaire" data-auteur="Auteur à compléter">
+
+                    <figure>
+
+                        <img src="img/livre6.png" alt="Couverture du livre Anglais universitaire">
+
+                        <figcaption>
+                            Anglais universitaire
+                        </figcaption>
+
+                    </figure>
+
+                    <div class="livre-card-contenu">
+
+                        <span class="badge-disponibilite disponible">
+                            Disponible
+                        </span>
+
+                        <h3>
+                            Anglais universitaire
+                        </h3>
+
+                        <p class="livre-auteur">
+                            Auteur à compléter
+                        </p>
+
+                        <div class="livre-informations">
+
+                            <p>
+                                <strong>Catégorie :</strong>
+                                Langues
+                            </p>
+
+                            <p>
+                                <strong>Année :</strong>
+                                <time datetime="2024">2024</time>
+                            </p>
+
+                            <p class="livre-exemplaires">
+                                3 exemplaires disponibles
+                            </p>
+
+                        </div>
+
+                        <div class="livre-actions">
+
+                            <button type="button" class="bouton bouton-secondaire bouton-details">
+                                Voir plus
+                            </button>
+
+                            <button type="button" class="bouton bouton-primaire bouton-emprunter">
+                                Emprunter
+                            </button>
+
+                        </div>
+
+                    </div>
+
                 </article>
 
             </div>
+
+
+            <!-- Aucun résultat -->
+            <div class="aucun-resultat" hidden>
+
+                <h2>
+                    Aucun livre trouvé
+                </h2>
+
+                <p>
+                    Aucun ouvrage ne correspond à votre recherche.
+                    Essayez une autre recherche ou modifiez vos filtres.
+                </p>
+
+            </div>
+
         </section>
 
     </main>
 
+
+    <!-- Pied de page -->
     <footer class="site-footer">
-        <p>&copy; 2026 CampusLib — Université Example</p>
+
+        <div class="footer-contenu">
+
+            <div>
+
+                <a href="index.html" class="logo">
+                    CampusLib
+                </a>
+
+                <p>
+                    La bibliothèque universitaire au service
+                    des étudiants.
+                </p>
+
+            </div>
+
+            <div class="footer-liens">
+
+                <h3>Navigation</h3>
+
+                <a href="index.html">Accueil</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div class="footer-liens">
+
+                <h3>Compte</h3>
+
+                <a href="connexion.html">Connexion</a>
+                <a href="inscription.html">Inscription</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bas">
+
+            <p>
+                &copy; 2026 CampusLib — Université Example
+            </p>
+
+        </div>
+
     </footer>
+    <!-- Fenêtre des détails du livre -->
+    <div class="modal-livre" id="modal-livre" hidden>
+
+        <div class="modal-contenu">
+
+            <button class="modal-fermer" id="modal-fermer" type="button" aria-label="Fermer">
+                &times;
+            </button>
+
+            <div class="modal-livre-contenu">
+
+                <div class="modal-image">
+
+                    <img id="modal-image" src="" alt="">
+
+                </div>
+
+                <div class="modal-informations">
+
+                    <span class="badge-disponibilite" id="modal-disponibilite">
+                    </span>
+
+                    <h2 id="modal-titre"></h2>
+
+                    <p class="livre-auteur" id="modal-auteur">
+                    </p>
+
+                    <div class="livre-informations">
+
+                        <p>
+                            <strong>Catégorie :</strong>
+                            <span id="modal-categorie"></span>
+                        </p>
+
+                        <p>
+                            <strong>Année :</strong>
+                            <span id="modal-annee"></span>
+                        </p>
+
+                        <p>
+                            <strong>Exemplaires :</strong>
+                            <span id="modal-exemplaires"></span>
+                        </p>
+
+                    </div>
+
+                    <p class="modal-description">
+                        Consultez les informations détaillées de cet ouvrage.
+                        Vous pourrez l'emprunter s'il est actuellement disponible.
+                    </p>
+
+                    <button class="bouton bouton-primaire" id="modal-emprunter" type="button">
+                        Emprunter
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
 
 </body>
 

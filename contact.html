@@ -1,48 +1,109 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bibliothèque du campus CampusLib">
+    <meta name="description" content="Contactez la bibliothèque universitaire CampusLib.">
     <title>CampusLib — Contact</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
+    <!-- En-tête -->
     <header class="site-header">
 
-        <a href="index.html" class="logo">CampusLib</a>
+        <a href="index.html" class="logo">
+            CampusLib
+        </a>
 
-        <nav aria-label="Navigation principale">
+        <nav class="site-nav" aria-label="Navigation principale">
+
+            <button class="menu-toggle" type="button" aria-label="Ouvrir le menu">
+                ☰
+            </button>
+
             <ul>
+
                 <li>
-                    <a href="index.html" aria-current="page">Accueil</a>
+                    <a href="index.html" aria-current="page">
+                        Accueil
+                    </a>
                 </li>
+
                 <li>
-                    <a href="catalogue.html">Catalogue</a>
+                    <a href="catalogue.html">
+                        Catalogue
+                    </a>
                 </li>
+
                 <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="contact.html">
+                        Contact
+                    </a>
                 </li>
+
+                <li id="menu-connexion">
+                    <a href="connexion.html">
+                        Connexion
+                    </a>
+                </li>
+
+                <li id="menu-inscription">
+                    <a href="inscription.html">
+                        Inscription
+                    </a>
+                </li>
+
+                <li id="menu-compte" hidden>
+                    <a href="compte.html">
+                        Mon compte
+                    </a>
+                </li>
+
+                <li id="menu-deconnexion" hidden>
+                    <button type="button" class="bouton-menu-deconnexion">
+                        Déconnexion
+                    </button>
+                </li>
+
             </ul>
+
         </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Changer de thème">
+            <span class="theme-icon">☾</span>
+        </button>
 
     </header>
 
     <main>
-            <section>
-                <h1>Contactez la bibliothèque</h1>
 
-                <p>
-                    Une question concernant un emprunt ou un livre ?
-                    Envoyez-nous un message.
-                </p>
-            </section>
+        <section class="page-introduction">
 
-            <section>
-                <h2>Formulaire de contact</h2>
+            <p class="sur-titre">CONTACT</p>
+
+            <h1>Contactez la bibliothèque</h1>
+
+            <p>
+                Une question concernant un emprunt ou un livre ?
+                Envoyez-nous un message.
+            </p>
+
+        </section>
+
+        <section class="contact-section">
+
+            <div class="contact-formulaire">
+
+                <div class="section-entete">
+
+                    <p class="sur-titre">ÉCRIVEZ-NOUS</p>
+
+                    <h2>Formulaire de contact</h2>
+
+                </div>
 
                 <form action="#" method="post" class="form-contact">
 
@@ -51,53 +112,77 @@
                         <legend>Vos informations</legend>
 
                         <div class="form-groupe">
+
                             <label for="nom">Nom</label>
-                            <input type="text" id="nom" name="nom" required minlength="2">
+
+                            <input type="text" id="nom" name="nom" required minlength="2" autocomplete="name">
+
                         </div>
 
                         <div class="form-groupe">
+
                             <label for="email">Adresse e-mail</label>
-                            <input type="email" id="email" name="email" required>
+
+                            <input type="email" id="email" name="email" required autocomplete="email">
+
                         </div>
 
                         <div class="form-groupe">
+
                             <label for="sujet">Sujet</label>
 
                             <select id="sujet" name="sujet">
+
                                 <option value="emprunt">Emprunt</option>
                                 <option value="retard">Retard</option>
-                                <option value="achat">Suggestion d’achat</option>
+                                <option value="achat">Suggestion d'achat</option>
                                 <option value="autre">Autre</option>
+
                             </select>
+
                         </div>
 
                         <div class="form-groupe">
+
                             <label for="numero">Numéro étudiant</label>
-                            <input type="text" id="numero" name="numero" pattern="[0-9]{8}" placeholder="12345678">
+
+                            <input type="text" id="numero" name="numero" pattern="[0-9]{8}" placeholder="12345678"
+                                inputmode="numeric">
+
                         </div>
 
                         <div class="form-groupe">
+
                             <label for="message">Message</label>
 
-                            <textarea id="message" name="message" maxlength="500" required></textarea>
+                            <textarea id="message" name="message" maxlength="500" required rows="6"></textarea>
+
                         </div>
 
-                        <div class="form-groupe">
+                        <div class="form-groupe form-checkbox">
+
                             <input type="checkbox" id="acceptation" name="acceptation" required>
 
                             <label for="acceptation">
                                 J'accepte les conditions d'utilisation.
                             </label>
+
                         </div>
 
-                        <button type="submit">Envoyer</button>
+                        <button type="submit" class="bouton bouton-primaire">
+                            Envoyer le message
+                        </button>
 
                     </fieldset>
 
                 </form>
-            </section>
 
-            <aside>
+            </div>
+
+            <aside class="contact-informations">
+
+                <p class="sur-titre">INFORMATIONS</p>
+
                 <h2>Informations pratiques</h2>
 
                 <address>
@@ -105,12 +190,60 @@
                     Université Example<br>
                     Campus universitaire
                 </address>
+
+                <div class="contact-detail">
+                    <strong>Email</strong>
+                    <a href="mailto:contact@campuslib.example">
+                        contact@campuslib.example
+                    </a>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>Téléphone</strong>
+                    <a href="tel:+22900000000">
+                        +229 00 00 00 00
+                    </a>
+                </div>
+
             </aside>
+
+        </section>
+
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 CampusLib — Université Example</p>
+
+        <div class="footer-contenu">
+
+            <div>
+                <a href="index.html" class="logo">CampusLib</a>
+                <p>
+                    La bibliothèque universitaire au service des étudiants.
+                </p>
+            </div>
+
+            <div class="footer-liens">
+                <h2>Navigation</h2>
+                <a href="index.html">Accueil</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-liens">
+                <h2>Compte</h2>
+                <a href="connexion.html">Connexion</a>
+                <a href="inscription.html">Inscription</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bas">
+            <p>&copy; 2026 CampusLib — Université Example</p>
+        </div>
+
     </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 
